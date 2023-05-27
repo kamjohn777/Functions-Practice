@@ -12,8 +12,26 @@
  */
 
 // Your code goes here...
+// function getDiffTwentySeven(num) {
+//   let i = 0;
+//   if(i > 27) {
+//     console.log(num * 2)
+//     return num * 2;
+//   } else {
 
+//   }
+// }
 
+const getDiffTwentySeven = (num) => {
+    let difference = Math.abs(num - 27);
+
+    if(num > 27) {
+      return difference * 2;
+      console.log(difference * 2);
+    } else {
+      return difference;
+    }
+}
 
 
 /** =========================
@@ -24,7 +42,16 @@
  */
 
 // Your code goes here
+ const sumOfTwoIntegers = (n1, n2) => {
+ let sum = Math.abs(n1+n2)
 
+ if(n1 === n2) {
+  return (n1 + n2) * 3;
+  console.log(n1 + n2 * 3);
+ } else {
+  return sum;
+ }
+ }
 
 
 
@@ -38,9 +65,18 @@
  */
 
 // Your code goes here...
+const  isOneOfThemOrTheirSumIsFourty = (num1, num2) => {
+  let sumOfParams = num1 + num2;
 
-
-
+  if(num1 === 40 || num2 === 40 || sumOfParams === 40) {
+    return true
+  } else {
+    return false;
+  }
+}
+console.log(isOneOfThemOrTheirSumIsFourty(22, 18)); 
+console.log(isOneOfThemOrTheirSumIsFourty(40, 13));  
+console.log(isOneOfThemOrTheirSumIsFourty(23, 16)); 
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-5"

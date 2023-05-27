@@ -16,7 +16,24 @@
 
 // Your code goes here...
 
+// function doesArrayIncludeItemsBetweenVals(arr, val1, val2) {
+//  if(!arr.length <= val1 && arr.length < val2) {
+//   return true;
+//  }else {
+//   return false
+//  }
+// };
+function doesArrayIncludeItemsBetweenVals(arr, val1, val2) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > val1 && arr[i] < val2) {
+      return true;
+    }
+  }
+  return false;
+}
 
+console.log(doesArrayIncludeItemsBetweenVals([2, 4, 2], 3, 5));
+console.log(doesArrayIncludeItemsBetweenVals([2, 4, 2], 5, 10));
 
 
 /**
@@ -35,9 +52,38 @@
  */
 
 // Your code goes here...
+// NAMED function
+function getValueWithConditionOne(num1, num2) {
+  const sum = num1 + num2;
+  // When we add variables into function bodies this is scoping if outside the function its global
 
+    if( num1 === 40 && num2 === 40) {
+      return sum;
+    }else {
+       return (num1 + num2) * 2;
+    }
+};
+getValueWithConditionOne(40, 40);
 
+// ARROW function
+const getValueWithConditionTwo = (num1, num2) => {
+ if (num1 === 40 && num2 === 40) {
+  return num1 + num2;
+ }else {
+  return (num1 + num2) * 2;
+ }
+};
+getValueWithConditionTwo(30, 50);
 
+// VARIABLE function expression
+let getValueWithConditionThree = function(num1, num2) {
+   if(num1 === 40 && num2 === 40) {
+    return num1 + num2;
+   }else {
+    return (num1 + num2) * 2;
+   }
+};
+getValueWithConditionThree(40, 70);
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-3"
@@ -53,3 +99,6 @@ const f = {
   getValueWithConditionThree: getValueWithConditionThree || undefined,
 }
 export { f };
+
+
+

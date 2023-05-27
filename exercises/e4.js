@@ -9,9 +9,10 @@
  * splitFirstAndLastNames('John Smith') => ['John', 'Smith']
  */
 
-function splitFirstAndLastNames(str) {
+const splitFirstAndLastNames = (str) => {
   return str.split(' ');
 }
+splitFirstAndLastNames('John', 'Smith');
 
 
 /** =========================
@@ -20,10 +21,9 @@ function splitFirstAndLastNames(str) {
  * personAge({ id: 1, name: 'Someone', age: 32}) => 32
  */
 
-const personAge = function(personObject) {
+const personAge = (personObject) => {
   return personObject.age;
 }
-
 
 /** =========================
  * The isNameInArray function takes an array and string of name as the arguments.
@@ -32,10 +32,20 @@ const personAge = function(personObject) {
  * isNameInArray(['Jon', 'Michael', 'Andrey'], 'James') => false;
  */
 
-const isNameInArray = function(arr, name) {
-  return arr.includes(name);
-}
+// const isNameInArray = function(arr, name) {
+//   return arr.includes(name);
+// }
 
+// const isNameInArray = (fullName, arr) => arr.includes(fullName) {
+//   const arr = ['John', 'Micheal', 'Andrey']
+// }
+
+const isNameInArray = (arr, fullName) => {
+
+  return arr.includes(fullName);
+  // console.log(myArray);
+};
+isNameInArray('John', 'Michael', 'Andrey');
 
 /** =========================
  * The logTimer function takes a number as the arguments.
@@ -44,18 +54,40 @@ const isNameInArray = function(arr, name) {
  * !!! Hint: There are two functions to refactor !!!
  */
 
-const logSecondsUpToMax = function(max) {
-  let i = 0;
-  const timer = setInterval(function() {
-    if (i < max) {
-      console.log(++i);
+// const logSecondsUpToMax = function(max) {
+//   let i = 0;
+//   const timer = setInterval(function() {
+//     if (i < max) {
+//       console.log(++i);
+//     } else {
+//       clearInterval(timer);
+//     }
+//   }, 1000);
+// }
+
+
+//  function logSecondsUpToMax(max) {
+//   let i = 0;
+
+//   const timer = setInterval(function() {
+//     if(i <= max) {
+//       console.log(i++);
+//     } else {
+//       clearInterval(timer);
+//     }
+//   }, 1000);
+//  }
+// logSecondsUpToMax(1000);
+const logSecondsUpToMax = (max) => {
+  let i = 1;
+  const timer = setInterval(() => {
+    if (i <= max) {
+      console.log(i++);
     } else {
       clearInterval(timer);
     }
   }, 1000);
-}
-
-
+};
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-4"

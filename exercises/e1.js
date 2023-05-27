@@ -14,6 +14,9 @@
 */
 
 // Your code goes here
+function logMessage() {
+ console.log('Hello, World!');
+}
 
 
 
@@ -31,7 +34,9 @@
 
 // Your code goes here...
 
-
+function logMyMessage(msg1) {
+  console.log(msg1);
+}
 
 
 /**
@@ -45,7 +50,9 @@
 */
 
 // Your code goes here...
-
+function logMessageWithMyName (name1) {
+  console.log('My name is ' + name1 + '!');
+}
 
 
 
@@ -62,8 +69,11 @@
 
 // Your code goes here...
 
-
-
+function logMyInfo(name, age) {
+  console.log('My name is ' + name + '. I am ' + age + ' years old!');
+}
+// 1. This function we set 2 arguments (the arguments are the words we put into the () next to our functions name) we set two arguments "name" and "age"
+//2. in our console log we put the concatentations  and used the two arguments our parameters so whenever a user sets the name and age relative to them it will console out their name and age along with the string message
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-1"

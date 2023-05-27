@@ -11,7 +11,10 @@
 */
 
 // Your function code starts here...
-
+function rectArea(sideA, sideB) {
+  return sideA * sideB;
+  // this is returning a value
+}
 
 // Use the function you created above to calculate the areas of 3 rooms
 // Assign the results to room1, room2, and room3 variables
@@ -19,7 +22,10 @@
 
 // Your code goes here:
 
-
+let room1 = rectArea(4, 6);
+let room2 = rectArea(13, 3 );
+let room3 = rectArea(4, 8 );
+// These variables we made a set to the value of us calling the value from the previous function
 
 /**
  * =============================================================
@@ -32,14 +38,20 @@
  */
 
 // Your code goes here...
-
-
+  function totalRoomsArea(room1, room2, room3) {
+  return room1 + room2 + room3;
+}
+// in this one we could set the params to anything because we are just building out the functions but at the end when we call the function then we put the actual params of the values we made
+// arguments are when we call the function and params are the fill in names we added to the function.
 
 // Make the function call in the parentheses of the console.log statement.
 // Use room1, room2, room3 variables as arguments for the function call
-const result = function () {
-    console.log(/* replace this comment with a function call here... */);
-}
+
+  const result = function() {
+    console.log(totalRoomsArea(room1, room2, room3));
+  }
+
+ 
 
 
 
